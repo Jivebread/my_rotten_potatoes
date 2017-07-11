@@ -1,12 +1,13 @@
--# add to end of index.html.haml
-= link_to 'Add new movie', new_movie_path
+
 %h2 Create New Movie
 
 = form_tag movies_path, :method => :post do
+-# <form action "/movies" method "post">
 
   = label :movie, :title, 'Title'
+-# <label for "movie_title">Title< label>  
   = text_field :movie, :title
-
+-# <input id "movie_title" name "movie[title]" size "30" type "text">
   = label :movie, :rating, 'Rating'
   = select :movie, :rating, ['G','PG','PG-13','R','NC-17']
  
