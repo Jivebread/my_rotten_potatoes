@@ -1,16 +1,13 @@
+%h1 Create New Movie
 
-%h2 Create New Movie
-
-= form_tag movies_path, :method => :post do
--# <form action "/movies" method "post">
+= form_tag movies_path do
 
   = label :movie, :title, 'Title'
--# <label for "movie_title">Title< label>  
-  = text_field :movie, :title
--# <input id "movie_title" name "movie[title]" size "30" type "text">
+  = text_field :movie, 'title'
+
   = label :movie, :rating, 'Rating'
   = select :movie, :rating, ['G','PG','PG-13','R','NC-17']
- 
+
   = label :movie, :release_date, 'Released On'
   = date_select :movie, :release_date
 
