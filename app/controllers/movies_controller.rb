@@ -1,6 +1,11 @@
 class MoviesController < ApplicationController
   def index
+    
+    @all_ratings = Movie.all_ratings
     @movies = Movie.order(params[:sort_by]).all
+    if params[:ratings] != nil
+      @movies = @movies.where({rating: params[:ratings].keys})
+    end
   end
   def show
   id = params[:id] # retrieve movie ID from URI route
