@@ -58,4 +58,5 @@ group :test do
   gem 'ZenTest'
 end
 gem 'themoviedb'
+gem 'omniauth-twitter'
 
