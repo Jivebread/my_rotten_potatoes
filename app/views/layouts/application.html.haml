@@ -1,12 +1,11 @@
 !!! 5
-%html
+%html.container
   %head
-    %title RottenPotatoes
+    %title.page-header RottenPotatoes 
     = stylesheet_link_tag 'application'
     = render :partial=>'login_form'
     = javascript_include_tag 'application'
     = csrf_meta_tags
 
-  %body
-    #main
-      = yield
+  %body.body
+    = yield
